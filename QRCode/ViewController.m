@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    self.title = @"二维码";
     self.QRArray = [[NSArray alloc]initWithObjects:@"原始二维码",@"原始条形码",@"彩色二维码",@"彩色条形码",@"渐变二维码", nil];
     
 
@@ -46,6 +48,7 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     QRCodeViewController * QRCode = [[QRCodeViewController alloc]init];
     QRCode.type = indexPath.row;
+    QRCode.QRTitle = self.QRArray[indexPath.row];
     [self.navigationController pushViewController:QRCode animated:YES];
 }
 

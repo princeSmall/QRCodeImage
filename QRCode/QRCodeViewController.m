@@ -22,6 +22,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = self.QRTitle;
     if (self.type == 0) {
         self.QRImageView.image = [QRCodeImage qrCodeImageWithContent:@"http://princesmall.cn" codeImageSize:200];
          [self.view addSubview:self.QRImageView];

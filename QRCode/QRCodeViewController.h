@@ -10,5 +10,6 @@
 
 @interface QRCodeViewController : UIViewController
 @property (nonatomic,assign)NSUInteger type;
+@property (nonatomic,copy)NSString * QRTitle;
 
 @end
